@@ -292,6 +292,40 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
         </div>
       </div>
 
+      <div class="cs reveal">
+        <div class="cs-l">
+          <div class="cs-tag">Architecture · Multi-Account · Retail Platform</div>
+          <h3 class="cs-title">Secure Multi-Account AWS Architecture for Retail Platforms</h3>
+          <p class="cs-desc">A security-first AWS reference architecture for retail workloads — demonstrating architect-level thinking across trust boundary separation, multi-account org design, and layered security controls. Grounded in real retail business context: customer identity, order workflows, payment-adjacent services, and prod/non-prod isolation.</p>
+          <ul class="cs-outcomes">
+            <li>Multi-account AWS Organizations model with dedicated management, security/log archive, shared services, production, and non-production accounts</li>
+            <li>Layered ingress: Route 53 → CloudFront → WAF → ALB → private subnets — reducing attack surface at every boundary</li>
+            <li>Threat model documenting retail platform threats, trust boundaries, business impact, and mitigations per attack vector</li>
+            <li>Security controls mapped across preventive, detective, responsive, and governance categories — the full control lifecycle</li>
+            <li>Architecture Decision Records explaining why each major design choice was made — not just what was built</li>
+          </ul>
+          <a href="https://github.com/uzobola/secure-multi-account-retail-architecture" target="_blank" class="cs-link">View on GitHub →</a>
+        </div>
+        <div class="cs-r">
+          <div class="meta-block">
+            <div class="meta-label">AWS Services</div>
+            <div class="tag-row"><span class="t-gray">AWS Organizations</span><span class="t-gray">WAF</span><span class="t-gray">CloudFront</span><span class="t-gray">GuardDuty</span><span class="t-gray">Security Hub</span><span class="t-gray">CloudTrail</span><span class="t-gray">Config</span><span class="t-gray">KMS</span></div>
+          </div>
+          <div class="meta-block">
+            <div class="meta-label">Documentation Included</div>
+            <div class="tag-row"><span class="t-green">Threat Model</span><span class="t-green">Architecture Decision Records</span><span class="t-green">Security Controls Map</span><span class="t-green">IAM Patterns</span><span class="t-green">Network Segmentation</span></div>
+          </div>
+          <div class="meta-block">
+            <div class="meta-label">Business Context</div>
+            <div class="tag-row"><span class="t-gray">Customer identity</span><span class="t-gray">Order workflows</span><span class="t-gray">Payment-adjacent services</span><span class="t-gray">Retail modernization</span></div>
+          </div>
+          <div class="meta-block">
+            <div class="meta-label">Connects to Portfolio Layers</div>
+            <div class="tag-row"><span class="t-green">Layer 1 GRC controls</span><span class="t-green">Layer 3 Identity</span><span class="t-green">Layer 4 Detection</span></div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -317,28 +351,30 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
         <div class="layer-num"><div class="layer-num-label">Layer 2 · Architecture</div><div class="layer-num-title">Secure Environment</div></div>
         <div class="layer-content">
           <div class="layer-question">"What are we governing? How is the environment structured?"</div>
-          <div class="layer-repos">SRA Multi-Account + Secure Workload Architecture</div>
-          <div class="layer-desc">AWS Security Reference Architecture. Multi-account governance, defense-in-depth workload design, threat model per layer.</div>
+          <div class="layer-repos">Secure Multi-Account AWS Architecture for Retail Platforms</div>
+          <div class="layer-desc">Multi-account org design, trust boundary separation, centralized logging, and layered ingress — grounded in real retail domain context. Customer identity, order workflows, payment-adjacent services, and prod/non-prod isolation.</div>
         </div>
-        <div class="layer-status"><span class="sbadge s-active">Building · Q2 2026</span></div>
+        <div class="layer-status"><span class="sbadge s-done">Complete</span></div>
       </div>
       <div class="layer-row">
         <div class="layer-num"><div class="layer-num-label">Layer 3 · Identity</div><div class="layer-num-title">IAM Governance</div></div>
         <div class="layer-content">
           <div class="layer-question">"Who can touch what? How is the lifecycle governed?"</div>
-          <div class="layer-repos">AWS IAM Governance Lab</div>
-          <div class="layer-desc">JML lifecycle automation, stale access detection, privileged access review, leaver validation, access certification evidence.</div>
+          <div class="layer-repos">Zero Trust Serverless Architecture &nbsp;·&nbsp; <span style="color:var(--green);font-size:11px;">Complete</span></div>
+          <div class="layer-desc" style="margin-bottom:10px;">Identity governance at the application layer — Cognito JWT auth with DynamoDB access scoped to the authenticated sub claim. BOLA/IDOR prevention on every request.</div>
+          <div class="layer-repos">AWS IAM Governance &nbsp;·&nbsp; <span style="color:var(--amber);font-size:11px;">Building · Q2 2026</span></div>
+          <div class="layer-desc">JML lifecycle automation, stale access detection, privileged access review, leaver validation, and access certification evidence at the AWS API layer.</div>
         </div>
-        <div class="layer-status"><span class="sbadge s-active">Building · Q2 2026</span></div>
+        <div class="layer-status"><span class="sbadge s-active">Partial</span></div>
       </div>
       <div class="layer-row">
         <div class="layer-num"><div class="layer-num-label">Layer 4 · Detection</div><div class="layer-num-title">Detection Engineering</div></div>
         <div class="layer-content">
           <div class="layer-question">"How do we know when something goes wrong?"</div>
-          <div class="layer-repos">AWS Detection Engineering Pipeline</div>
-          <div class="layer-desc">Event-driven detection rules mapped to MITRE ATT&amp;CK. CloudTrail → EventBridge → Lambda enrichment → structured findings.</div>
+          <div class="layer-repos">IAM Cross-Account Detection Pipeline</div>
+          <div class="layer-desc">Event-driven detection rules mapped to MITRE ATT&amp;CK. CloudTrail → EventBridge → Lambda enrichment → structured findings with false positive tuning.</div>
         </div>
-        <div class="layer-status"><span class="sbadge s-plan">Planned</span></div>
+        <div class="layer-status"><span class="sbadge s-done">Complete</span></div>
       </div>
       <div class="layer-row">
         <div class="layer-num"><div class="layer-num-label">Layer 5 · Response</div><div class="layer-num-title">Incident Response</div></div>
@@ -393,49 +429,41 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
         <div class="p-layer">Layer 4 · Detection Engineering</div>
         <div class="p-title">IAM Cross-Account Detection Pipeline</div>
         <div class="p-why">"Detects when IAM controls are violated."</div>
-        <p class="p-desc">Event-driven pipeline targeting unauthorized AssumeRole activity. Production-grade false positive tuning.</p>
+        <p class="p-desc">Event-driven pipeline targeting unauthorized AssumeRole activity. Production-grade false positive tuning. MITRE ATT&CK mapped.</p>
         <div class="p-footer"><div class="p-tags"><span class="p-tag">CloudTrail</span><span class="p-tag">EventBridge</span><span class="p-tag">Lambda</span></div><a href="https://github.com/uzobola/aws-cloud-security-projects" target="_blank" class="p-link">GitHub →</a></div>
       </div>
 
-      <div class="arch-fam reveal">
-        <div class="af-inner">
-          <div class="af-hdr">
-            <div><div class="af-title">Secure AWS Architecture Family</div><div class="af-desc">Layer 2 · "Defines the environment these controls govern."</div></div>
-            <span class="sbadge s-active">Building</span>
-          </div>
-          <div class="af-grid">
-            <div class="pcard">
-              <div class="p-layer">2a · Platform</div>
-              <div class="p-title">SRA Multi-Account Architecture</div>
-              <div class="p-why">"Defines where security tools live and why."</div>
-              <p class="p-desc">AWS Organizations, Security Hub delegated admin, GuardDuty organization, CloudTrail org trail, SCPs as preventive controls.</p>
-              <div class="p-footer"><div class="p-tags"><span class="p-tag">Terraform</span><span class="p-tag">AWS SRA</span></div><span class="sbadge s-active" style="font-size:9px;">In Progress</span></div>
-            </div>
-            <div class="pcard">
-              <div class="p-layer">2b · Workload</div>
-              <div class="p-title">Secure Workload Architecture</div>
-              <div class="p-why">"Shows what a properly secured workload looks like."</div>
-              <p class="p-desc">Three-tier defense-in-depth with threat model table mapping each control to the attack it prevents.</p>
-              <div class="p-footer"><div class="p-tags"><span class="p-tag">CDK</span><span class="p-tag">VPC</span><span class="p-tag">WAF</span></div><span class="sbadge s-plan" style="font-size:9px;">Planned</span></div>
-            </div>
+      <div class="pcard reveal">
+        <div class="p-layer">Layer 2 · Architecture</div>
+        <div class="p-title">Secure Multi-Account AWS Architecture for Retail</div>
+        <div class="p-why">"Defines the environment these controls govern."</div>
+        <p class="p-desc">Multi-account org design with trust boundary separation, centralized logging, layered ingress, and prod/non-prod isolation. Grounded in Genesco retail domain — customer identity, order workflows, payment-adjacent services.</p>
+        <div class="p-footer"><div class="p-tags"><span class="p-tag">AWS Orgs</span><span class="p-tag">IAM</span><span class="p-tag">VPC</span><span class="p-tag">CloudTrail</span></div><a href="https://github.com/uzobola/secure-multi-account-retail-architecture" target="_blank" class="p-link">GitHub →</a></div>
+      </div>
+
+      <div class="pcard reveal">
+        <div class="p-layer">Layer 3 · Identity Governance</div>
+        <div class="p-title">Zero Trust Serverless Architecture</div>
+        <div class="p-why">"Governs identity on every request at the workload level."</div>
+        <p class="p-desc">Cognito JWT auth with DynamoDB access scoped to authenticated sub claim. BOLA/IDOR prevention, split Lambda execution roles, KMS encryption, CDK IaC.</p>
+        <div class="p-footer">
+          <div class="p-tags"><span class="p-tag">CDK</span><span class="p-tag">Cognito</span><span class="p-tag">Lambda</span></div>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <span class="sbadge s-done" style="font-size:9px;">Complete</span>
+            <a href="https://github.com/uzobola/zero-trust-serverless-cdk" target="_blank" class="p-link">GitHub →</a>
           </div>
         </div>
       </div>
 
       <div class="pcard reveal">
-        <div class="p-layer">Layer 3 · Identity</div>
-        <div class="p-title">AWS IAM Governance Lab</div>
-        <div class="p-why">"Governs who has access and validates the lifecycle."</div>
-        <p class="p-desc">JML automation, RBAC/SoD, access certification, leaver validation. Built alongside SimplifyIAM cohort — same patterns as SailPoint and Saviynt.</p>
-        <div class="p-footer"><div class="p-tags"><span class="p-tag">midPoint</span><span class="p-tag">LDAP</span><span class="p-tag">SAML</span></div><span class="sbadge s-active" style="font-size:9px;">Building</span></div>
-      </div>
-
-      <div class="pcard reveal">
-        <div class="p-layer">Layer 2 · Architecture</div>
-        <div class="p-title">Zero Trust Serverless Architecture</div>
-        <div class="p-why">"Shows Zero Trust design at the workload level."</div>
-        <p class="p-desc">Cognito JWT, split Lambda roles, KMS encryption, CDK IaC. The controls validated in Repo 1 deployed in practice.</p>
-        <div class="p-footer"><div class="p-tags"><span class="p-tag">CDK</span><span class="p-tag">Cognito</span><span class="p-tag">Lambda</span></div><a href="https://github.com/uzobola/zero-trust-serverless-cdk" target="_blank" class="p-link">GitHub →</a></div>
+        <div class="p-layer">Layer 3 · Identity Governance</div>
+        <div class="p-title">AWS IAM Governance</div>
+        <div class="p-why">"Governs the full identity lifecycle across AWS accounts."</div>
+        <p class="p-desc">JML lifecycle automation, stale access detection, privileged access review, cross-account trust analysis, leaver validation with three-way identity correlation, and quarterly access certification evidence.</p>
+        <div class="p-footer">
+          <div class="p-tags"><span class="p-tag">Python</span><span class="p-tag">boto3</span><span class="p-tag">midPoint</span></div>
+          <span class="sbadge s-active" style="font-size:9px;">Building · Q2 2026</span>
+        </div>
       </div>
 
       <div class="pcard reveal">
