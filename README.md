@@ -6,7 +6,7 @@ Portfolio site: **[uzobola-portfolio.vercel.app](https://uzobola-portfolio.verce
 
 ---
 
-## 🎯 How My Work Connects
+## How My Work Connects
 
 A single connected AWS cloud security program, not a pile of unrelated repos. Every project is a working artifact, documented the way it would be on the job: architecture, controls, evidence, and threat models.
 
@@ -16,7 +16,7 @@ The program spans seven layers: GRC and evidence automation, secure cloud archit
 
 ---
 
-## 🏅 Certifications
+## Certifications
 
 | Certification | Issuer | Status |
 |---|---|---|
@@ -31,7 +31,7 @@ The program spans seven layers: GRC and evidence automation, secure cloud archit
 
 ---
 
-## 🛠️ Technical Skills
+## Technical Skills
 
 | Category | Skills |
 |---|---|
@@ -58,7 +58,7 @@ The program spans seven layers: GRC and evidence automation, secure cloud archit
 
 ---
 
-## 📬 Connect
+## Connect
 
 - 💼 LinkedIn: [linkedin.com/in/uzobolarinwa](https://www.linkedin.com/in/uzobolarinwa)
 - 🌐 Portfolio: [uzobola-portfolio.vercel.app](https://uzobola-portfolio.vercel.app)
