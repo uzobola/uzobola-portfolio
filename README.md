@@ -1,88 +1,65 @@
-# uzobola-portfolio
+# Uzo Bolarinwa — Identity Governance & Cloud Security Engineer
 
-Personal AWS cloud security portfolio site — live at [uzobola-portfolio.vercel.app](https://uzobola-portfolio.vercel.app).
+Designing, implementing, and automating **IGA lifecycle systems**, AWS cloud security architecture, and compliance-automated identity controls, from HR-driven joiner-mover-leaver provisioning to audit-ready evidence pipelines. Currently extending identity governance into **non-human and AI-agent identities**, the fastest-growing unaddressed gap in enterprise IAM.
 
-## Overview
+Portfolio site: **[uzobola-portfolio.vercel.app](https://uzobola-portfolio.vercel.app)**
 
-This portfolio presents my work as a connected seven-layer AWS cloud security program — not a collection of isolated repositories.
+---
 
-The program is organized around:
+## 🎯 How My Work Connects
 
-1. GRC and evidence automation
-2. Secure cloud architecture
-3. Identity and access governance
-4. Detection engineering
-5. Incident response readiness
-6. Policy as code
-7. Security leadership and communication
+A single connected AWS cloud security program, not a pile of unrelated repos. Every project is a working artifact, documented the way it would be on the job: architecture, controls, evidence, and threat models.
 
-The goal of this site is to show how cloud security controls, architecture, detection, governance, and business risk connect across a realistic AWS security program.
+The program spans seven layers: GRC and evidence automation, secure cloud architecture, identity and access governance, detection engineering, incident response readiness, policy as code, and security communication.
 
-## Featured Projects
+**Current focus:** extending identity governance from the human lifecycle (joiner, mover, leaver) into non-human and AI-agent identity governance.
 
-### AWS GRC Engineering Project
+---
 
-Automated compliance framework for AWS control validation, evidence collection, risk scoring, and multi-framework mapping.
+## 🏅 Certifications
 
-- 16 automated controls across 6 domains
-- SOC 2, NIST CSF, NIST 800-53, ISO 27001, PCI DSS, and CIS mapping
-- Audit-ready JSON/CSV evidence output
-- IAM governance, access review, and evidence vault modules
+| Certification | Issuer | Status |
+|---|---|---|
+| AWS Certified Security – Specialty | AWS | ✅ Active |
+| AWS Certified Solutions Architect – Associate | AWS | ✅ Active |
+| CompTIA Security+ | CompTIA | ✅ Active |
+| Red Hat Certified Engineer (RHCE) | Red Hat | ✅ Active |
+| Red Hat Certified System Administrator (RHCSA) | Red Hat | ✅ Active |
+| Project Management Professional (PMP) | PMI | ✅ Active |
+| AWS Solutions Architect – Professional (SAP-C02) | AWS | 📖 In progress |
+| Microsoft Identity & Access Administrator (SC-300) | Microsoft | 📖 In progress |
 
-Repository: [aws-grc-engineering-project](https://github.com/uzobola/aws-grc-engineering-project)
+---
 
-### Secure Multi-Account Retail Architecture
+## 🛠️ Technical Skills
 
-AWS reference architecture for secure retail workloads using multi-account isolation, centralized logging, layered ingress controls, private workload placement, and documented threat modeling.
+| Category | Skills |
+|---|---|
+| **Identity & Access Governance** | IGA, IAM, midPoint, 389 Directory Server / LDAP, RBAC, joiner-mover-leaver lifecycle, reconciliation, access certification, non-human identity governance, federation (OIDC / SAML), Cognito, Entra ID |
+| **Cloud Security** | AWS Organizations (multi-account), GuardDuty, Security Hub, Config, CloudTrail, KMS, VPC design, Zero Trust |
+| **GRC & Compliance Automation** | SOC 2, NIST 800-53, NIST CSF, ISO 27001, PCI DSS, CIS, control mapping, risk scoring, evidence automation |
+| **Detection Engineering** | CloudTrail telemetry, EventBridge, MITRE ATT&CK mapping, severity scoring, alert triage |
+| **IaC & Automation** | AWS CDK, Terraform, Python (boto3), Groovy, Bash, GitHub Actions |
+| **Linux & Platform** | RHEL, Linux systems administration, SELinux, hardening |
 
-- AWS Organizations account separation
-- Retail production and non-production isolation
-- Centralized CloudTrail, Config, GuardDuty, Security Hub, and log archive design
-- Threat model and preventive/detective/responsive/governance controls
+---
 
-Repository: [secure-multi-account-retail-architecture](https://github.com/uzobola/secure-multi-account-retail-architecture)
+## 📁 Portfolio by Program Layer
 
-### Zero Trust Serverless CDK
+| Layer | Repository | What it demonstrates | Status |
+|---|---|---|---|
+| **GRC & Evidence Automation** | [aws-grc-engineering-project](https://github.com/uzobola/aws-grc-engineering-project) | 16 automated controls across 6 domains; SOC 2 / NIST 800-53 / CSF / ISO 27001 / PCI DSS / CIS mapping; risk scoring; IAM governance module and immutable evidence vault | ✅ Shipped |
+| **Secure Cloud Architecture** | [secure-multi-account-retail-architecture](https://github.com/uzobola/secure-multi-account-retail-architecture) | AWS Organizations multi-account isolation, centralized logging, layered ingress, threat model with preventive, detective, responsive, and governance controls | ✅ Shipped |
+| **Identity & Access Governance** | [enterprise-iam-lifecycle-automation](https://github.com/uzobola/enterprise-iam-lifecycle-automation) | midPoint + 389 Directory Server lifecycle (joiner, mover, leaver); reconciliation; unmatched service-account (NHI) disposition; Python evidence validator with control mapping | ✅ Shipped |
+| **Identity & Access Governance** | [zero-trust-serverless-cdk](https://github.com/uzobola/zero-trust-serverless-cdk) | Zero Trust serverless API (Cognito as OIDC IdP, API Gateway, Lambda, DynamoDB); OIDC/JWT auth with sub-claim binding against BOLA/IDOR; route-level least privilege; controls matrix and evidence | ✅ Shipped |
+| **Detection Engineering** | [iam-cross-account-detection-pipeline](https://github.com/uzobola/iam-cross-account-detection-pipeline) | Real-time AssumeRole detection (CloudTrail → EventBridge → Lambda → SNS); MITRE ATT&CK T1078 and T1550.001; severity scoring; trusted-role allowlist | ✅ Shipped |
+| **Non-Human & Agent Identity (frontier)** | aws-iam-governance-lab *(coming soon)* | Cloud non-human identity governance engine: discovery, ownership, least-privilege and credential-model scoring mapped to OWASP NHI Top 10 and NIST 800-53 AC/IA; OIDC-federated workload identity (static keys → short-lived federated credentials); extending into AI-agent identity governance | 🔨 In progress |
+| **Live Cohort — IGA Implementation** | [simplifyiam-portfolio](https://github.com/uzobola/simplifyiam-portfolio) | Hands-on midPoint IGA implementation (HR-sourced provisioning, reconciliation) from a live identity governance cohort | 🔨 In progress |
 
-Secure serverless Notes API built with AWS CDK, Cognito, API Gateway, Lambda, and DynamoDB using Zero Trust principles.
+---
 
-- Cognito JWT authentication
-- JWT `sub` claim binding to prevent BOLA/IDOR
-- Route-level least privilege with split Lambda functions
-- Threat model, controls matrix, and evidence packages
+## 📬 Connect
 
-Repository: [zero-trust-serverless-cdk](https://github.com/uzobola/zero-trust-serverless-cdk)
-
-### IAM Cross-Account Detection Pipeline
-
-Real-time AWS AssumeRole detection pipeline using CloudTrail, EventBridge, Lambda, and SNS.
-
-- MITRE ATT&CK mapping for T1078 and T1550.001
-- High/Medium/Low severity scoring
-- Trusted automation role allowlist
-- SOC 2 and NIST CSF compliance evidence alignment
-
-Repository: [iam-cross-account-detection-pipeline](https://github.com/uzobola/iam-cross-account-detection-pipeline)
-
-## Why This Portfolio Exists
-
-This portfolio demonstrates how I think about cloud security from multiple layers:
-
-- designing secure AWS architectures
-- automating control validation and evidence collection
-- governing IAM and cross-account access
-- detecting suspicious activity from AWS telemetry
-- mapping technical controls to business risk and compliance outcomes
-- communicating security architecture clearly through diagrams, documentation, and working projects
-
-## Built With
-
-- HTML
-- CSS
-- GitHub
-- Vercel
-
-## Author
-
-**Uzo Bolarinwa**  
-AWS Security | GRC Engineering | Cloud Security Architecture | Compliance Automation
+- 💼 LinkedIn: [linkedin.com/in/uzobolarinwa](https://www.linkedin.com/in/uzobolarinwa)
+- 🌐 Portfolio: [uzobola-portfolio.vercel.app](https://uzobola-portfolio.vercel.app)
+- 📧 Email: uzobolarinwa@yahoo.com
