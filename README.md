@@ -56,6 +56,7 @@ The program spans seven layers: GRC and evidence automation, secure cloud archit
 | **Non-Human & Agent Identity (frontier)** | aws-iam-governance-lab *(coming soon)* | Cloud non-human identity governance engine: discovery, ownership, least-privilege and credential-model scoring mapped to OWASP NHI Top 10 and NIST 800-53 AC/IA; OIDC-federated workload identity (static keys → short-lived federated credentials); extending into AI-agent identity governance | 🔨 In progress |
 | **Live Cohort — IGA Implementation** | [simplifyiam-portfolio](https://github.com/uzobola/simplifyiam-portfolio) | Hands-on midPoint IGA implementation (HR-sourced provisioning, reconciliation) from a live identity governance cohort | 🔨 In progress |
 
+
 ---
 
 ## Connect
