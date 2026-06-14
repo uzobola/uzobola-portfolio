@@ -217,8 +217,30 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
   <div class="sw">
     <div class="eyebrow">Case Studies</div>
     <h2 class="stitle">Completed work, in depth.</h2>
-    <p class="sdesc">Five projects across the identity and cloud security stack: IGA lifecycle automation, GRC engineering, identity threat detection, Zero Trust, and multi-account architecture, with real outcomes against live environments.</p>
+    <p class="sdesc">Seven projects across the identity and cloud security stack: non-human identity governance, IGA lifecycle automation, GRC engineering, policy-as-code guardrails, identity threat detection, Zero Trust, and multi-account architecture, with real outcomes against live environments.</p>
     <div class="case-studies">
+
+      <div class="cs reveal">
+        <div class="cs-l">
+          <div class="cs-tag">Non-Human &amp; Agent Identity · Frontier Project</div>
+          <h3 class="cs-title">AWS NHI Governance Engine</h3>
+          <p class="cs-desc">A non-human identity governance engine that scans an AWS account and scores the identities people forget — IAM roles, users, access keys, secrets, and trust policies — mapping every finding to the OWASP NHI Top 10 and NIST 800-53, and gating CI on unaccepted high-severity risk.</p>
+          <ul class="cs-outcomes">
+            <li>Eleven detectors: ownership, over-privilege (managed-policy admin and unused permissions via Access Advisor), trust-policy exposure (wildcard, cross-account without ExternalId, OIDC aud/sub gaps), and credential model</li>
+            <li>Runs in CI via GitHub OIDC federation with no stored credentials, on a least-privilege read-only role</li>
+            <li>Exception register with time-boxed risk acceptance and net-residual-risk reporting — open risk separated from signed-off risk</li>
+            <li>JSON and Markdown audit reports rendered in the CI run summary; documented threat model for the scanner itself</li>
+            <li>Packaged as a tested Python library; the gate fails the build on open HIGH or CRITICAL findings</li>
+          </ul>
+          <a href="https://github.com/uzobola/aws-nhi-governance-engine" target="_blank" class="cs-link">View on GitHub →</a>
+        </div>
+        <div class="cs-r">
+          <div class="meta-block"><div class="meta-label">Tech Stack</div><div class="tag-row"><span class="t-gray">Python</span><span class="t-gray">boto3</span><span class="t-gray">GitHub OIDC</span><span class="t-gray">GitHub Actions</span><span class="t-gray">pytest</span></div></div>
+          <div class="meta-block"><div class="meta-label">Mapped To</div><div class="tag-row"><span class="t-green">OWASP NHI Top 10</span><span class="t-green">NIST 800-53 AC</span><span class="t-green">NIST 800-53 IA</span></div></div>
+          <div class="meta-block"><div class="meta-label">Governance</div><div class="tag-row"><span class="t-green">Ownership</span><span class="t-green">Least privilege</span><span class="t-green">Exception register</span><span class="t-green">CI gating</span></div></div>
+          <div class="meta-block"><div class="meta-label">Connects to Portfolio Layers</div><div class="tag-row"><span class="t-green">Layer 1 Identity</span><span class="t-green">Frontier · NHI &amp; Agent</span></div></div>
+        </div>
+      </div>
 
       <div class="cs reveal">
         <div class="cs-l">
@@ -270,6 +292,27 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
               <span class="ctrl ctrl-f">DET-001 FAIL</span><span class="ctrl ctrl-f">SEC-001 FAIL</span>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="cs reveal">
+        <div class="cs-l">
+          <div class="cs-tag">Policy as Code · Prevention</div>
+          <h3 class="cs-title">AWS Policy-as-Code Guardrails</h3>
+          <p class="cs-desc">Preventive guardrails that evaluate a Terraform plan before apply and fail the build when a change would violate a security control. The shift-left counterpart to the NHI engine: the engine detects risky identities that already exist, these guardrails stop a class of misconfigurations from ever deploying.</p>
+          <ul class="cs-outcomes">
+            <li>OPA Rego policies executed with Conftest against <code>terraform show -json</code> plan output</li>
+            <li>Denies public S3, security groups open to 0.0.0.0/0 or ::/0, wildcard IAM, unencrypted storage, and missing Owner tags</li>
+            <li>Every policy mapped to NIST 800-53 (SC-7, AC-6(10), SC-28, CM-8)</li>
+            <li>Unit-tested with <code>opa test</code> and enforced as a GitHub Actions CI gate that blocks violating plans</li>
+          </ul>
+          <a href="https://github.com/uzobola/aws-policy-as-code-guardrails" target="_blank" class="cs-link">View on GitHub →</a>
+        </div>
+        <div class="cs-r">
+          <div class="meta-block"><div class="meta-label">Tech Stack</div><div class="tag-row"><span class="t-gray">OPA Rego</span><span class="t-gray">Conftest</span><span class="t-gray">Terraform</span><span class="t-gray">GitHub Actions</span></div></div>
+          <div class="meta-block"><div class="meta-label">Controls Enforced</div><div class="tag-row"><span class="t-gray">Public S3</span><span class="t-gray">Open admin ports</span><span class="t-gray">Wildcard IAM</span><span class="t-gray">Encryption at rest</span><span class="t-gray">Ownership tags</span></div></div>
+          <div class="meta-block"><div class="meta-label">Mapped To</div><div class="tag-row"><span class="t-green">NIST SC-7</span><span class="t-green">NIST AC-6(10)</span><span class="t-green">NIST SC-28</span><span class="t-green">NIST CM-8</span></div></div>
+          <div class="meta-block"><div class="meta-label">Connects to Portfolio Layers</div><div class="tag-row"><span class="t-green">Layer 6 Prevention</span><span class="t-green">Frontier · NHI &amp; Agent</span></div></div>
         </div>
       </div>
 
@@ -368,10 +411,10 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
           <div class="layer-desc" style="margin-bottom:10px;">HR-sourced joiner-mover-leaver lifecycle on midPoint and 389 Directory Server. Reconciliation, non-human identity disposition, and a Python evidence validator that proves the directory matches the source of truth.</div>
           <div class="layer-repos">Zero Trust Serverless Architecture &nbsp;·&nbsp; <span style="color:var(--green);font-size:11px;">Complete</span></div>
           <div class="layer-desc" style="margin-bottom:10px;">Identity governance at the application layer — Cognito JWT auth with DynamoDB access scoped to the authenticated sub claim. BOLA/IDOR prevention on every request.</div>
-          <div class="layer-repos">AWS NHI Governance Engine &nbsp;·&nbsp; <span style="color:var(--amber);font-size:11px;">Building</span></div>
-          <div class="layer-desc">Discovers and scores non-human identities (IAM roles, access keys, secrets) across an AWS account, mapping findings to the OWASP NHI Top 10 and NIST 800-53. Includes OIDC-federated workload identity, and extends toward AI-agent identity governance.</div>
+          <div class="layer-repos">AWS NHI Governance Engine &nbsp;·&nbsp; <span style="color:var(--amber);font-size:11px;">Active</span></div>
+          <div class="layer-desc">Scans an AWS account and scores non-human identities — IAM roles, users, access keys, secrets, and trust policies — with eleven detectors mapped to the OWASP NHI Top 10 and NIST 800-53. OIDC-federated CI, an exception register with net-residual reporting, and a documented threat model. Extending toward AI-agent identity governance.</div>
         </div>
-        <div class="layer-status"><span class="sbadge s-active">Partial</span></div>
+        <div class="layer-status"><span class="sbadge s-active">Active</span></div>
       </div>
       <div class="layer-row">
         <div class="layer-num"><div class="layer-num-label">Layer 2 · Architecture</div><div class="layer-num-title">Secure Environment</div></div>
@@ -413,10 +456,10 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
         <div class="layer-num"><div class="layer-num-label">Layer 6 · Prevention</div><div class="layer-num-title">Policy as Code</div></div>
         <div class="layer-content">
           <div class="layer-question">"How do we stop non-compliant infrastructure before it deploys?"</div>
-          <div class="layer-repos">AWS Policy as Code</div>
-          <div class="layer-desc">AWS Config custom rules, SCPs, Checkov pre-commit scanning, OPA Terraform validation. Compliance shifted left.</div>
+          <div class="layer-repos">AWS Policy-as-Code Guardrails</div>
+          <div class="layer-desc">OPA Rego guardrails executed with Conftest against Terraform plans before apply. Denies public S3, open admin ports (IPv4 and IPv6), wildcard IAM, unencrypted storage, and missing Owner tags, each mapped to NIST 800-53. Unit-tested and enforced as a CI gate.</div>
         </div>
-        <div class="layer-status"><span class="sbadge s-plan">Planned</span></div>
+        <div class="layer-status"><span class="sbadge s-done">Complete</span></div>
       </div>
       <div class="layer-row">
         <div class="layer-num"><div class="layer-num-label">Layer 7 · Leadership</div><div class="layer-num-title">Executive Dashboard</div></div>
@@ -440,6 +483,20 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
       <p style="font-size:14px;color:var(--text3);max-width:340px;font-weight:300;line-height:1.6;">Every repo answers one question in the security program. Together they form a complete cloud security governance narrative.</p>
     </div>
     <div class="proj-grid">
+
+      <div class="pcard reveal">
+        <div class="p-layer">Layer 1 · Non-Human &amp; Agent Identity</div>
+        <div class="p-title">AWS NHI Governance Engine</div>
+        <div class="p-why">"Governs the identities people forget: machines, workloads, and AI agents."</div>
+        <p class="p-desc">Eleven detectors that scan an AWS account for risky non-human identities — over-privilege, wildcard and cross-account trust, OIDC gaps, ownership, and static credentials — mapped to the OWASP NHI Top 10 and NIST 800-53. OIDC-federated CI, an exception register, and a CI gate on high-severity findings.</p>
+        <div class="p-footer">
+          <div class="p-tags"><span class="p-tag">Python</span><span class="p-tag">boto3</span><span class="p-tag">OIDC</span></div>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <span class="sbadge s-active" style="font-size:9px;">Active</span>
+            <a href="https://github.com/uzobola/aws-nhi-governance-engine" target="_blank" class="p-link">GitHub →</a>
+          </div>
+        </div>
+      </div>
 
       <div class="pcard reveal">
         <div class="p-layer">Layer 3 · GRC Engineering</div>
@@ -480,17 +537,6 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
       </div>
 
       <div class="pcard reveal">
-        <div class="p-layer">Layer 1 · Identity Governance</div>
-        <div class="p-title">AWS NHI Governance Engine</div>
-        <div class="p-why">"Governs the identities people forget: machines, workloads, and AI agents."</div>
-        <p class="p-desc">Discovers and scores non-human identities across an AWS account (IAM roles, access keys, secrets), mapping findings to the OWASP NHI Top 10 and NIST 800-53. Includes OIDC-federated workload identity and extends toward AI-agent identity governance.</p>
-        <div class="p-footer">
-          <div class="p-tags"><span class="p-tag">Python</span><span class="p-tag">boto3</span><span class="p-tag">OIDC</span></div>
-          <span class="sbadge s-active" style="font-size:9px;">Building</span>
-        </div>
-      </div>
-
-      <div class="pcard reveal">
         <div class="p-layer">Layer 5 · Response</div>
         <div class="p-title">AWS Incident Response Automation</div>
         <div class="p-why">"Automates what happens when a control fails."</div>
@@ -500,10 +546,16 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
 
       <div class="pcard reveal">
         <div class="p-layer">Layer 6 · Prevention</div>
-        <div class="p-title">AWS Policy as Code</div>
+        <div class="p-title">AWS Policy-as-Code Guardrails</div>
         <div class="p-why">"Prevents non-compliant infrastructure before it deploys."</div>
-        <p class="p-desc">Config custom rules, SCPs, Checkov pre-commit hooks, OPA Terraform validation. Compliance shifted left.</p>
-        <div class="p-footer"><div class="p-tags"><span class="p-tag">Checkov</span><span class="p-tag">OPA</span><span class="p-tag">Config</span></div><span class="sbadge s-plan" style="font-size:9px;">Planned</span></div>
+        <p class="p-desc">OPA Rego guardrails run with Conftest against Terraform plans before apply. Denies public S3, open admin ports, wildcard IAM, unencrypted storage, and missing Owner tags. NIST-mapped, opa-tested, and enforced as a CI gate.</p>
+        <div class="p-footer">
+          <div class="p-tags"><span class="p-tag">OPA Rego</span><span class="p-tag">Conftest</span><span class="p-tag">Terraform</span></div>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <span class="sbadge s-done" style="font-size:9px;">Complete</span>
+            <a href="https://github.com/uzobola/aws-policy-as-code-guardrails" target="_blank" class="p-link">GitHub →</a>
+          </div>
+        </div>
       </div>
 
       <div class="pcard reveal">
