@@ -1,17 +1,19 @@
+<p align="center">
+  <a href="https://uzobolarinwa.com">
+    <img src="assets/portfolio-hero.png" alt="Uzo Bolarinwa — identity governance and cloud security portfolio" width="100%">
+  </a>
+</p>
+
 <h1 align="center">Uzo Bolarinwa</h1>
 <p align="center"><strong>Identity Governance &amp; Cloud Security Engineer</strong></p>
 
 <p align="center">
   <a href="https://uzobolarinwa.com">
-    <img src="https://img.shields.io/badge/Visit_the_live_portfolio-uzobolarinwa.com-1f4e79?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Visit the live portfolio at uzobolarinwa.com">
+    <img src="https://img.shields.io/badge/Visit_the_live_portfolio-uzobolarinwa.com-2ea44f?style=for-the-badge&labelColor=14532d&logo=googlechrome&logoColor=white" alt="Visit the live portfolio at uzobolarinwa.com">
   </a>
 </p>
 
 <p align="center"><em>Start at the portfolio site for the case studies and architecture. The repositories below are the working code behind it.</em></p>
-
----
-
-Designing, implementing, and automating **IGA lifecycle systems**, AWS cloud security architecture, and compliance-automated identity controls, from HR-driven joiner-mover-leaver provisioning to audit-ready evidence pipelines. Currently extending identity governance into **non-human and AI-agent identities**, the fastest-growing unaddressed gap in enterprise IAM.
 
 ---
 
