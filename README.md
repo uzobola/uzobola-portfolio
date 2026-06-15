@@ -17,10 +17,6 @@
 
 ---
 
-Designing, implementing, and automating **IGA lifecycle systems**, AWS cloud security architecture, and compliance-automated identity controls, from HR-driven joiner-mover-leaver provisioning to audit-ready evidence pipelines. Currently extending identity governance into **non-human and AI-agent identities**, the fastest-growing unaddressed gap in enterprise IAM.
-
----
-
 ## How My Work Connects
 
 A single connected AWS cloud security program, not a pile of unrelated repos. Every project is a working artifact, documented the way it would be on the job: architecture, controls, evidence, and threat models.
