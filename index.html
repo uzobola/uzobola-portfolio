@@ -179,6 +179,7 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
     <li><a href="#featured">Case Studies</a></li>
     <li><a href="#narrative">Architecture</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#proof-matrix">Proof Matrix</a></li>
     <li><a href="#about">About</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Get in touch</a>
@@ -200,6 +201,7 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
     <p style="font-size:14px;color:var(--text3);margin:20px 0 30px;">Open to IGA Engineer · IAM Engineer · Cloud Security Engineer roles.</p>
     <div class="hero-actions">
       <a href="#featured" class="btn-primary">View case studies →</a>
+      <a href="assets/Uzo_Bolarinwa_Resume.pdf" class="btn-ghost" download>Download Resume</a>
       <a href="https://github.com/uzobola" target="_blank" class="btn-ghost">GitHub</a>
       <a href="https://linkedin.com/in/uzobolarinwa" target="_blank" class="btn-ghost">LinkedIn</a>
     </div>
@@ -214,11 +216,47 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
 
 <div class="divline"></div>
 
+<section id="start-here">
+  <div class="sw">
+    <div class="eyebrow">Start Here</div>
+    <h2 class="stitle">Three projects that show the range.</h2>
+    <p class="sdesc">The full program is below. If you have a minute, start with these: machine-identity governance, human-identity lifecycle, and compliance evidence as code.</p>
+    <div style="max-width:780px;border-bottom:1px solid var(--border2);">
+      <a href="https://github.com/uzobola/aws-nhi-governance-engine" target="_blank" style="display:flex;gap:20px;align-items:baseline;padding:22px 0;border-top:1px solid var(--border2);text-decoration:none;">
+        <span style="font-family:'Fraunces',serif;font-size:24px;color:var(--green2);flex-shrink:0;line-height:1;">01</span>
+        <span style="flex:1;">
+          <span style="display:block;font-size:18px;font-weight:600;color:var(--text);">AWS NHI Governance Engine</span>
+          <span style="display:block;font-size:15px;color:var(--text2);margin-top:5px;line-height:1.6;">Detects and scores risky machine identities across an AWS account, mapped to the OWASP NHI Top 10 and NIST 800-53, gating CI on unaccepted risk.</span>
+        </span>
+        <span style="color:var(--green);font-size:14px;flex-shrink:0;">View →</span>
+      </a>
+      <a href="https://github.com/uzobola/enterprise-iam-lifecycle-automation" target="_blank" style="display:flex;gap:20px;align-items:baseline;padding:22px 0;border-top:1px solid var(--border2);text-decoration:none;">
+        <span style="font-family:'Fraunces',serif;font-size:24px;color:var(--green2);flex-shrink:0;line-height:1;">02</span>
+        <span style="flex:1;">
+          <span style="display:block;font-size:18px;font-weight:600;color:var(--text);">Enterprise IAM Lifecycle Automation</span>
+          <span style="display:block;font-size:15px;color:var(--text2);margin-top:5px;line-height:1.6;">Joiner-mover-leaver identity lifecycle with midPoint and LDAP, account reconciliation, and a Python evidence validator.</span>
+        </span>
+        <span style="color:var(--green);font-size:14px;flex-shrink:0;">View →</span>
+      </a>
+      <a href="https://github.com/uzobola/aws-grc-engineering-project" target="_blank" style="display:flex;gap:20px;align-items:baseline;padding:22px 0;border-top:1px solid var(--border2);text-decoration:none;">
+        <span style="font-family:'Fraunces',serif;font-size:24px;color:var(--green2);flex-shrink:0;line-height:1;">03</span>
+        <span style="flex:1;">
+          <span style="display:block;font-size:18px;font-weight:600;color:var(--text);">AWS GRC Engineering Automation</span>
+          <span style="display:block;font-size:15px;color:var(--text2);margin-top:5px;line-height:1.6;">Sixteen automated controls generating audit-style evidence mapped to CIS, NIST 800-53, SOC 2, ISO 27001, and PCI DSS.</span>
+        </span>
+        <span style="color:var(--green);font-size:14px;flex-shrink:0;">View →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="divline"></div>
+
 <section id="featured">
   <div class="sw">
     <div class="eyebrow">Case Studies</div>
     <h2 class="stitle">Completed work, in depth.</h2>
-    <p class="sdesc">Seven projects across the identity and cloud security stack: non-human identity governance, IGA lifecycle automation, GRC engineering, policy-as-code guardrails, identity threat detection, Zero Trust, and multi-account architecture, with real outcomes against live environments.</p>
+    <p class="sdesc">Seven projects across the identity and cloud security stack: non-human identity governance, IGA lifecycle automation, GRC engineering, policy-as-code guardrails, identity threat detection, Zero Trust, and multi-account architecture, with working code and outcomes from controlled AWS environments.</p>
     <div class="case-studies">
 
       <div class="cs reveal">
@@ -234,6 +272,10 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
             <li>Packaged as a tested Python library; the gate fails the build on open HIGH or CRITICAL findings</li>
           </ul>
           <a href="https://github.com/uzobola/aws-nhi-governance-engine" target="_blank" class="cs-link">View on GitHub →</a>
+          <div style="margin-top:8px;display:flex;gap:18px;flex-wrap:wrap;font-size:13px;">
+            <a href="https://github.com/uzobola/aws-nhi-governance-engine/blob/main/sample_report.md" target="_blank" style="color:var(--green);text-decoration:none;">Sample audit report →</a>
+            <a href="https://github.com/uzobola/aws-nhi-governance-engine/blob/main/Threat-Model.md" target="_blank" style="color:var(--green);text-decoration:none;">Threat model →</a>
+          </div>
           <p style="margin:12px 0 0;"><a href="https://github.com/uzobola/aws-nhi-governance-engine/actions/workflows/nhi-governance-scan.yml" target="_blank"><img src="https://github.com/uzobola/aws-nhi-governance-engine/actions/workflows/nhi-governance-scan.yml/badge.svg" alt="NHI engine CI status"></a></p>
         </div>
         <div class="cs-r">
@@ -254,7 +296,7 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
             <li>Reconciliation that surfaces out-of-band changes and orphaned accounts, with disablement before deletion</li>
             <li>Unmatched service-account (non-human identity) disposition: link to owner, remove, or document as a time-bound exception</li>
             <li>Python evidence validator comparing the HR source against the directory, emitting control-mapped JSON findings</li>
-            <li>Three-way identity correlation and SOC 2 CC6 access-control mapping for audit-ready evidence</li>
+            <li>Three-way identity correlation and SOC 2 CC6 access-control mapping for audit-style evidence</li>
           </ul>
           <a href="https://github.com/uzobola/enterprise-iam-lifecycle-automation" target="_blank" class="cs-link">View on GitHub →</a>
         </div>
@@ -270,7 +312,7 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
         <div class="cs-l">
           <div class="cs-tag">GRC Engineering · Anchor Project</div>
           <h3 class="cs-title">AWS Continuous Compliance Automation Framework</h3>
-          <p class="cs-desc">An engineering-driven approach to Governance, Risk, and Compliance on AWS. This framework interrogates AWS APIs directly — producing structured evidence, risk-scored findings, and audit-ready reporting across six major compliance frameworks simultaneously.</p>
+          <p class="cs-desc">An engineering-driven approach to Governance, Risk, and Compliance on AWS. This framework interrogates AWS APIs directly — producing structured evidence, risk-scored findings, and audit-style reporting across six major compliance frameworks simultaneously.</p>
           <ul class="cs-outcomes">
             <li>16 automated controls across IAM, S3, CloudTrail, GuardDuty, and Security Hub</li>
             <li>Risk scoring engine with compliance percentage, severity grouping, and prioritized remediation</li>
@@ -310,6 +352,9 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
             <li>Unit-tested with <code>opa test</code> and enforced as a GitHub Actions CI gate that blocks violating plans</li>
           </ul>
           <a href="https://github.com/uzobola/aws-policy-as-code-guardrails" target="_blank" class="cs-link">View on GitHub →</a>
+          <div style="margin-top:8px;display:flex;gap:18px;flex-wrap:wrap;font-size:13px;">
+            <a href="https://github.com/uzobola/aws-policy-as-code-guardrails/tree/main/policies" target="_blank" style="color:var(--green);text-decoration:none;">Rego policies →</a>
+          </div>
           <p style="margin:12px 0 0;"><a href="https://github.com/uzobola/aws-policy-as-code-guardrails/actions/workflows/policy-check.yml" target="_blank"><img src="https://github.com/uzobola/aws-policy-as-code-guardrails/actions/workflows/policy-check.yml/badge.svg" alt="Guardrails CI status"></a></p>
         </div>
         <div class="cs-r">
@@ -328,7 +373,7 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
           <ul class="cs-outcomes">
             <li>CloudTrail → EventBridge → Lambda enrichment → SNS alert pipeline</li>
             <li>Targets unauthorized AssumeRole activity, misconfigured trust policies, and cross-account anomalies</li>
-            <li>Production-scale false positive tuning for CI/CD roles, Lambda execution, and developer sessions</li>
+            <li>False-positive tuning for CI/CD roles, Lambda execution, and developer sessions</li>
             <li>Structured JSON findings with context, severity, and embedded remediation guidance</li>
           </ul>
           <a href="https://github.com/uzobola/aws-cloud-security-projects" target="_blank" class="cs-link">View on GitHub →</a>
@@ -336,7 +381,7 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
         <div class="cs-r">
           <div class="meta-block"><div class="meta-label">Tech Stack</div><div class="tag-row"><span class="t-gray">CloudTrail</span><span class="t-gray">EventBridge</span><span class="t-gray">Lambda</span><span class="t-gray">SNS</span><span class="t-gray">Python</span></div></div>
           <div class="meta-block"><div class="meta-label">Detection Targets</div><div class="tag-row"><span class="t-gray">AssumeRole anomalies</span><span class="t-gray">Trust policy drift</span><span class="t-gray">Cross-account access</span></div></div>
-          <div class="meta-block"><div class="meta-label">Design Principles</div><div class="tag-row"><span class="t-green">Event-driven</span><span class="t-green">False positive tuned</span><span class="t-green">Enriched findings</span><span class="t-green">Audit-ready</span></div></div>
+          <div class="meta-block"><div class="meta-label">Design Principles</div><div class="tag-row"><span class="t-green">Event-driven</span><span class="t-green">False positive tuned</span><span class="t-green">Enriched findings</span><span class="t-green">Audit-style</span></div></div>
           <div class="meta-block"><div class="meta-label">Connects to Portfolio Layers</div><div class="tag-row"><span class="t-green">Layer 4 Detection</span><span class="t-green">Layer 1 Identity</span></div></div>
         </div>
       </div>
@@ -345,7 +390,7 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
         <div class="cs-l">
           <div class="cs-tag">Zero Trust · Serverless Architecture</div>
           <h3 class="cs-title">Zero Trust Serverless Architecture on AWS</h3>
-          <p class="cs-desc">A three-stack AWS serverless application built on Zero Trust design principles — every request authenticated, every resource encrypted, every action logged. Demonstrates the IAM and data protection controls validated by the GRC Engineering framework, deployed as production-ready infrastructure as code.</p>
+          <p class="cs-desc">A three-stack AWS serverless application built on Zero Trust design principles — every request authenticated, every resource encrypted, every action logged. Demonstrates the IAM and data protection controls validated by the GRC Engineering framework, built as infrastructure as code with AWS CDK.</p>
           <ul class="cs-outcomes">
             <li>Cognito JWT authentication with API Gateway HTTP API v2 — identity-before-connect enforced</li>
             <li>Split Lambda execution roles — each function scoped to exact required permissions only</li>
@@ -515,7 +560,7 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
         <div class="p-layer">Layer 4 · Identity Threat Detection</div>
         <div class="p-title">IAM Cross-Account Detection Pipeline</div>
         <div class="p-why">"Detects when IAM controls are violated."</div>
-        <p class="p-desc">Event-driven pipeline targeting unauthorized AssumeRole activity. Production-grade false positive tuning. MITRE ATT&CK mapped.</p>
+        <p class="p-desc">Event-driven pipeline targeting unauthorized AssumeRole activity. Tuned false-positive handling. MITRE ATT&CK mapped.</p>
         <div class="p-footer"><div class="p-tags"><span class="p-tag">CloudTrail</span><span class="p-tag">EventBridge</span><span class="p-tag">Lambda</span></div><a href="https://github.com/uzobola/aws-cloud-security-projects" target="_blank" class="p-link">GitHub →</a></div>
       </div>
 
@@ -589,6 +634,35 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
 
 <div class="divline"></div>
 
+<section id="proof-matrix">
+  <div class="sw">
+    <div class="eyebrow">Proof Matrix</div>
+    <h2 class="stitle">Skills mapped to proof.</h2>
+    <p class="sdesc">Where each skill actually shows up in the work, so this portfolio maps to a role description in seconds.</p>
+    <table style="width:100%;max-width:800px;border-collapse:collapse;font-size:15px;">
+      <thead>
+        <tr>
+          <th style="text-align:left;padding:0 18px 12px 0;border-bottom:1px solid var(--border2);color:var(--text3);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:12px;width:38%;">Skill</th>
+          <th style="text-align:left;padding:0 0 12px;border-bottom:1px solid var(--border2);color:var(--text3);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:12px;">Project proof</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:13px 18px 13px 0;border-bottom:1px solid var(--border);color:var(--text);vertical-align:top;font-weight:500;">AWS IAM</td><td style="padding:13px 0;border-bottom:1px solid var(--border);color:var(--text2);vertical-align:top;">NHI Engine · Cross-Account Detection · Zero Trust Serverless</td></tr>
+        <tr><td style="padding:13px 18px 13px 0;border-bottom:1px solid var(--border);color:var(--text);vertical-align:top;font-weight:500;">IGA lifecycle (joiner / mover / leaver)</td><td style="padding:13px 0;border-bottom:1px solid var(--border);color:var(--text2);vertical-align:top;">Enterprise IAM Lifecycle Automation</td></tr>
+        <tr><td style="padding:13px 18px 13px 0;border-bottom:1px solid var(--border);color:var(--text);vertical-align:top;font-weight:500;">Non-human identity governance</td><td style="padding:13px 0;border-bottom:1px solid var(--border);color:var(--text2);vertical-align:top;">NHI Governance Engine</td></tr>
+        <tr><td style="padding:13px 18px 13px 0;border-bottom:1px solid var(--border);color:var(--text);vertical-align:top;font-weight:500;">Python automation</td><td style="padding:13px 0;border-bottom:1px solid var(--border);color:var(--text2);vertical-align:top;">NHI Engine · GRC Framework · Detection Pipeline</td></tr>
+        <tr><td style="padding:13px 18px 13px 0;border-bottom:1px solid var(--border);color:var(--text);vertical-align:top;font-weight:500;">Terraform</td><td style="padding:13px 0;border-bottom:1px solid var(--border);color:var(--text2);vertical-align:top;">GRC Project · Policy-as-Code Guardrails</td></tr>
+        <tr><td style="padding:13px 18px 13px 0;border-bottom:1px solid var(--border);color:var(--text);vertical-align:top;font-weight:500;">Policy-as-code (OPA / Rego)</td><td style="padding:13px 0;border-bottom:1px solid var(--border);color:var(--text2);vertical-align:top;">Policy-as-Code Guardrails</td></tr>
+        <tr><td style="padding:13px 18px 13px 0;border-bottom:1px solid var(--border);color:var(--text);vertical-align:top;font-weight:500;">Detection engineering</td><td style="padding:13px 0;border-bottom:1px solid var(--border);color:var(--text2);vertical-align:top;">IAM Cross-Account Detection Pipeline</td></tr>
+        <tr><td style="padding:13px 18px 13px 0;border-bottom:1px solid var(--border);color:var(--text);vertical-align:top;font-weight:500;">Compliance evidence automation</td><td style="padding:13px 0;border-bottom:1px solid var(--border);color:var(--text2);vertical-align:top;">GRC Framework · IAM Lifecycle Automation</td></tr>
+        <tr><td style="padding:13px 18px 13px 0;border-bottom:1px solid var(--border);color:var(--text);vertical-align:top;font-weight:500;">Cloud security architecture</td><td style="padding:13px 0;border-bottom:1px solid var(--border);color:var(--text2);vertical-align:top;">Secure Multi-Account Architecture · Zero Trust Serverless</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="divline"></div>
+
 <section id="about">
   <div class="sw">
     <div class="eyebrow">About</div>
@@ -617,6 +691,10 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
         </div>
       </div>
     </div>
+    <div style="max-width:760px;margin-top:48px;padding-top:24px;border-top:1px solid var(--border);">
+      <div style="font-size:11px;color:var(--text4);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px;">Portfolio Scope</div>
+      <p style="font-size:14px;color:var(--text3);line-height:1.7;">These are portfolio projects built in controlled AWS and local lab environments to model real-world identity, cloud security, detection, policy-as-code, and compliance-evidence workflows. They include working code, tests, CI, sample outputs, and documented limitations. They are not presented as production systems operated inside a large enterprise.</p>
+    </div>
   </div>
 </section>
 
@@ -632,6 +710,7 @@ footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify
         <a href="https://linkedin.com/in/uzobolarinwa" target="_blank" class="contact-link">↗ LinkedIn</a>
         <a href="https://github.com/uzobola" target="_blank" class="contact-link">↗ GitHub</a>
         <a href="mailto:uzo@uzobolarinwa.com" class="contact-link">✉ Email</a>
+        <a href="assets/Uzo_Bolarinwa_Resume.pdf" class="contact-link" download>↓ Resume</a>
       </div>
     </div>
   </div>
