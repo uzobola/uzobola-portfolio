@@ -1,9 +1,15 @@
+<p align="center">
+  <a href="https://uzobolarinwa.com">
+    <img src="assets/portfolio-hero.png" alt="Uzo Bolarinwa — identity governance and cloud security portfolio" width="100%">
+  </a>
+</p>
+
 <h1 align="center">Uzo Bolarinwa</h1>
 <p align="center"><strong>Identity Governance &amp; Cloud Security Engineer</strong></p>
 
 <p align="center">
   <a href="https://uzobolarinwa.com">
-    <img src="https://img.shields.io/badge/Visit_the_live_portfolio-uzobolarinwa.com-1f4e79?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Visit the live portfolio at uzobolarinwa.com">
+    <img src="https://img.shields.io/badge/Visit_the_live_portfolio-uzobolarinwa.com-2ea44f?style=for-the-badge&labelColor=14532d&logo=googlechrome&logoColor=white" alt="Visit the live portfolio at uzobolarinwa.com">
   </a>
 </p>
 
