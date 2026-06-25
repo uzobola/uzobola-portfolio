@@ -19,26 +19,19 @@
 
 ## How My Work Connects
 
-A single connected AWS cloud security program, not a pile of unrelated repos. Every project is a working artifact, documented the way it would be on the job: architecture, controls, evidence, and threat models.
-
-The program spans seven layers: GRC and evidence automation, secure cloud architecture, identity and access governance, detection engineering, incident response readiness, policy as code, and security communication.
+A connected identity governance and cloud security program, not a pile of unrelated repos. Identity and access governance is the center; secure cloud architecture, GRC and evidence automation, detection engineering, policy as code, and incident response are the layers that support it. Every project is a working artifact, documented the way it would be on the job: architecture, controls, evidence, and threat models.
 
 **Current focus:** extending identity governance from the human lifecycle (joiner, mover, leaver) into non-human and AI-agent identity governance.
 
 ---
 
-## Certifications
+## Start Here
 
-| Certification | Issuer | Status |
-|---|---|---|
-| AWS Certified Security – Specialty | AWS | ✅ Active |
-| AWS Certified Solutions Architect – Associate | AWS | ✅ Active |
-| CompTIA Security+ | CompTIA | ✅ Active |
-| Red Hat Certified Engineer (RHCE) | Red Hat | ✅ Active |
-| Red Hat Certified System Administrator (RHCSA) | Red Hat | ✅ Active |
-| Project Management Professional (PMP) | PMI | ✅ Active |
-| AWS Solutions Architect – Professional (SAP-C02) | AWS | 📖 In progress |
-| Microsoft Identity & Access Administrator (SC-300) | Microsoft | 📖 In progress |
+New here? These three show the core of the work:
+
+- **[aws-nhi-governance-engine](https://github.com/uzobola/aws-nhi-governance-engine)**: non-human identity risk across ownership, trust, credentials, over-privilege, and CI gating, mapped to OWASP NHI Top 10 and NIST 800-53.
+- **[enterprise-iam-lifecycle-automation](https://github.com/uzobola/enterprise-iam-lifecycle-automation)**: joiner-mover-leaver lifecycle, reconciliation, and service-account governance on midPoint and 389 Directory Server.
+- **[aws-grc-engineering-project](https://github.com/uzobola/aws-grc-engineering-project)**: automated controls, evidence, risk scoring, and framework mapping.
 
 ---
 
@@ -66,6 +59,21 @@ The program spans seven layers: GRC and evidence automation, secure cloud archit
 | **Identity Threat Detection** | [iam-cross-account-detection-pipeline](https://github.com/uzobola/iam-cross-account-detection-pipeline) | Real-time AssumeRole detection (CloudTrail → EventBridge → Lambda → SNS); MITRE ATT&CK T1078 and T1550.001; severity scoring; trusted-role allowlist | ✅ Shipped |
 | **Secure Cloud Architecture** | [secure-multi-account-retail-architecture](https://github.com/uzobola/secure-multi-account-retail-architecture) | AWS Organizations multi-account isolation, centralized logging, layered ingress, threat model with preventive, detective, responsive, and governance controls | ✅ Shipped |
 | **Identity & Access Governance** | [zero-trust-serverless-cdk](https://github.com/uzobola/zero-trust-serverless-cdk) | Zero Trust serverless API (Cognito as OIDC IdP, API Gateway, Lambda, DynamoDB); OIDC/JWT auth with sub-claim binding against BOLA/IDOR; route-level least privilege; controls matrix and evidence | ✅ Shipped |
+
+---
+
+## Certifications
+
+| Certification | Issuer | Status |
+|---|---|---|
+| AWS Certified Security – Specialty | AWS | ✅ Active |
+| AWS Certified Solutions Architect – Associate | AWS | ✅ Active |
+| CompTIA Security+ | CompTIA | ✅ Active |
+| Red Hat Certified Engineer (RHCE) | Red Hat | ✅ Active |
+| Red Hat Certified System Administrator (RHCSA) | Red Hat | ✅ Active |
+| Project Management Professional (PMP) | PMI | ✅ Active |
+| AWS Solutions Architect – Professional (SAP-C02) | AWS | 📖 In progress |
+| Microsoft Identity & Access Administrator (SC-300) | Microsoft | 📖 In progress |
 
 ---
 
